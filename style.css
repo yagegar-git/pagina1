@@ -1,11 +1,16 @@
+/* ============================= */
 /* RESET SIMPLE */
+/* Elimina márgenes y paddings por defecto del navegador */
+/* ============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ESTILO GENERAL */
+/* ============================= */
+/* ESTILO GENERAL DEL SITIO */
+/* ============================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
@@ -13,15 +18,20 @@ body {
     line-height: 1.6;
 }
 
+/* ============================= */
 /* CONTENEDOR PRINCIPAL */
+/* Centra el contenido y limita el ancho */
+/* ============================= */
 .container {
     width: 85%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 0;
 }
 
+/* ============================= */
 /* NAVBAR */
+/* ============================= */
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,7 +48,7 @@ nav h1 {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 30px; /* espacio entre enlaces */
 }
 
 nav a {
@@ -52,30 +62,27 @@ nav a:hover {
     color: #007acc;
 }
 
-/* HERO (corregido para que coincida con tu HTML) */
-#hero {
+/* ============================= */
+/* SECCIÓN HERO (Inicio) */
+/* ============================= */
+.hero {
     padding: 80px 0;
 }
 
-#hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-#hero h2 {
-    font-size: 22px;
-    font-weight: 400;
-    color: #555;
+.hero h2 {
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
-#hero p {
+.hero p {
     font-size: 18px;
     color: #555;
     max-width: 600px;
 }
 
-/* BOTÓN */
+/* ============================= */
+/* BOTONES */
+/* ============================= */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -92,68 +99,64 @@ nav a:hover {
     color: white;
 }
 
-/* HABILIDADES */
-#habilidades {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 60px;
-}
-
-/* TARJETAS */
+/* ============================= */
+/* TARJETAS GENERALES */
+/* (Se usan para los proyectos) */
+/* ============================= */
 .card {
     border: 1px solid #eaeaea;
     padding: 25px;
     border-radius: 6px;
     transition: 0.3s;
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .card:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.card h3,
-.card h2 {
+.card h3 {
     margin-bottom: 10px;
 }
 
 .card p {
     color: #555;
-    margin-bottom: 10px;
 }
 
-/* GRID DE PROYECTOS */
-.grid-proyectos {
+/* ================================================= */
+/* 🔥 CUADRÍCULA SOLO PARA LA PÁGINA DE PROYECTOS */
+/* ================================================= */
+
+/* Contenedor de la cuadrícula */
+.proyectos-grid {
     display: grid;
+
+    /* 2 columnas del mismo tamaño */
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+
+    /* Espacio entre tarjetas */
+    gap: 25px;
+
+    /* Separación superior respecto al título */
+    margin-top: 30px;
 }
 
+/* Responsive: cuando la pantalla sea pequeña,
+   los proyectos pasan a una sola columna */
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================= */
 /* FOOTER */
+/* ============================= */
 footer {
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 30px 0;
     border-top: 1px solid #eaeaea;
     text-align: center;
     font-size: 14px;
     color: #777;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    #habilidades {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-proyectos {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
 }
