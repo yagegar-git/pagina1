@@ -149,6 +149,20 @@ nav a:hover {
     }
 }
 
+
+/* ============================= */
+/* Última agregación: todos los links externos se ven iguales*/
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
 /* ============================= */
 /* FOOTER */
 /* ============================= */
@@ -160,3 +174,4 @@ footer {
     font-size: 14px;
     color: #777;
 }
+
